@@ -32,9 +32,9 @@ function makeTitle(str) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(makeTitle);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(makeTitle);
+console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
