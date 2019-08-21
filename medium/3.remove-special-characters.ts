@@ -1,5 +1,5 @@
-// Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
-function doubleLetters(word) {
+// Challenge link here: https://edabit.com/challenge/k7CwrsKPHrEL8h4z6
+function removeSpecialCharacters(str) {
   // put your code here
   // don't touch anything else
 }
@@ -32,26 +32,22 @@ function doubleLetters(word) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(doubleLetters);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(removeSpecialCharacters);
+console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "loop",
-      expectation: true
+      input: "The quick brown fox!",
+      expectation: "The quick brown fox"
     },
     {
-      input: "yummy",
-      expectation: true
+      input: "%fd76$fd(-)6GvKlO.",
+      expectation: "fd76fd-6GvKlO"
     },
     {
-      input: "orange",
-      expectation: false
-    },
-    {
-      input: "munchkin",
-      expectation: false
+      input: "D0n$c sed 0di0 du1",
+      expectation: "D0nc sed 0di0 du1"
     }
   ];
 

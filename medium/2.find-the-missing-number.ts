@@ -1,5 +1,5 @@
-// Challenge link here: https://edabit.com/challenge/LvtsCQNpx7CwHGubf
-function makeTitle(str) {
+// Challenge link here: https://edabit.com/challenge/rgdT9sZ4QhsKhaSw9
+function missingNum(arr) {
   // put your code here
   // don't touch anything else
 }
@@ -32,26 +32,22 @@ function makeTitle(str) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(makeTitle);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(missingNum);
+console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "This is a title",
-      expectation: "This Is A Title"
+      input: [1, 2, 3, 4, 6, 7, 8, 9, 10],
+      expectation: 5
     },
     {
-      input: "capitalize every word",
-      expectation: "Capitalize Every Word"
+      input: [7, 2, 3, 6, 5, 9, 1, 4, 8],
+      expectation: 10
     },
     {
-      input: "I Like Pizza",
-      expectation: "I Like Pizza"
-    },
-    {
-      input: "PIZZA PIZZA PIZZA",
-      expectation: "PIZZA PIZZA PIZZA"
+      input: [10, 5, 1, 2, 4, 6, 8, 3, 9],
+      expectation: 7
     }
   ];
 

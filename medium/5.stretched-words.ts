@@ -1,5 +1,5 @@
-// Challenge link here: https://edabit.com/challenge/MsNyn2xmTzRWjFuMT
-function evenOddTransform(arr, n) {
+// Challenge link here: https://edabit.com/challenge/X4WDm4ZroqPZpiqgA
+function unstretch(word) {
   // put your code here
   // don't touch anything else
 }
@@ -32,35 +32,31 @@ function evenOddTransform(arr, n) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(evenOddTransform);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(unstretch);
+console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: [[3, 4, 9], 3],
-      expectation: [9, -2, 15],
-      multiParam: true
+      input: "ppoeemm",
+      expectation: "poem"
     },
     {
-      input: [[0, 0, 0], 10],
-      expectation: [-20, -20, -20],
-      multiParam: true
+      input: "wiiiinnnnd",
+      expectation: "wind"
     },
     {
-      input: [[1, 2, 3], 1],
-      expectation: [3, 0, 5],
-      multiParam: true
+      input: "ttiiitllleeee",
+      expectation: "title"
+    },
+    {
+      input: "cccccaaarrrbbonnnnn",
+      expectation: "carbon"
     }
   ];
 
-  return tests.map(({ input, expectation, multiParam }) => {
-    let functionReturn;
-    if (multiParam) {
-      functionReturn = func(...input);
-    } else {
-      functionReturn = func(input);
-    }
+  return tests.map(({ input, expectation }) => {
+    const functionReturn = func(input);
     const passed = functionReturn === expectation;
     const message =
       input + (passed ? ": THE TEST PASSED" : ": THE TEST FAILED");

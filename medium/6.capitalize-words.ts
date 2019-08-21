@@ -1,5 +1,5 @@
-// Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
-function reverse(str) {
+// Challenge link here: https://edabit.com/challenge/LvtsCQNpx7CwHGubf
+function makeTitle(str) {
   // put your code here
   // don't touch anything else
 }
@@ -32,22 +32,26 @@ function reverse(str) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(reverse);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(makeTitle);
+console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "Reverse",
-      expectation: "esreveR"
+      input: "This is a title",
+      expectation: "This Is A Title"
     },
     {
-      input: "This is a typical sentence.",
-      expectation: "This is a lacipyt .ecnetnes"
+      input: "capitalize every word",
+      expectation: "Capitalize Every Word"
     },
     {
-      input: "The dog is big.",
-      expectation: "The dog is big."
+      input: "I Like Pizza",
+      expectation: "I Like Pizza"
+    },
+    {
+      input: "PIZZA PIZZA PIZZA",
+      expectation: "PIZZA PIZZA PIZZA"
     }
   ];
 

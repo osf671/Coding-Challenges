@@ -1,5 +1,5 @@
-// Challenge link here: https://edabit.com/challenge/rgdT9sZ4QhsKhaSw9
-function missingNum(arr) {
+// Challenge link here: https://edabit.com/challenge/rJPgai5r5XdXeQmLg
+function isIsogram(str) {
   // put your code here
   // don't touch anything else
 }
@@ -32,22 +32,22 @@ function missingNum(arr) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(missingNum);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(isIsogram);
+console.log("THE RESULTS:\r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO:\r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: [1, 2, 3, 4, 6, 7, 8, 9, 10],
-      expectation: 5
+      input: "Algorism",
+      expectation: true
     },
     {
-      input: [7, 2, 3, 6, 5, 9, 1, 4, 8],
-      expectation: 10
+      input: "PasSword",
+      expectation: false
     },
     {
-      input: [10, 5, 1, 2, 4, 6, 8, 3, 9],
-      expectation: 7
+      input: "Consecutive",
+      expectation: false
     }
   ];
 

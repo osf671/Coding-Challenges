@@ -1,5 +1,5 @@
-// Challenge link here: https://edabit.com/challenge/X4WDm4ZroqPZpiqgA
-function unstretch(word) {
+// Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
+function doubleLetters(word) {
   // put your code here
   // don't touch anything else
 }
@@ -32,26 +32,26 @@ function unstretch(word) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(unstretch);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(doubleLetters);
+console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "ppoeemm",
-      expectation: "poem"
+      input: "loop",
+      expectation: true
     },
     {
-      input: "wiiiinnnnd",
-      expectation: "wind"
+      input: "yummy",
+      expectation: true
     },
     {
-      input: "ttiiitllleeee",
-      expectation: "title"
+      input: "orange",
+      expectation: false
     },
     {
-      input: "cccccaaarrrbbonnnnn",
-      expectation: "carbon"
+      input: "munchkin",
+      expectation: false
     }
   ];
 

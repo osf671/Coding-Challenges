@@ -1,5 +1,5 @@
-// Challenge link here: https://edabit.com/challenge/k7CwrsKPHrEL8h4z6
-function removeSpecialCharacters(str) {
+// Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
+function reverse(str) {
   // put your code here
   // don't touch anything else
 }
@@ -32,22 +32,22 @@ function removeSpecialCharacters(str) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const results = setupAndRun(removeSpecialCharacters);
-console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", results);
+const res = setupAndRun(reverse);
+console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "The quick brown fox!",
-      expectation: "The quick brown fox"
+      input: "Reverse",
+      expectation: "esreveR"
     },
     {
-      input: "%fd76$fd(-)6GvKlO.",
-      expectation: "fd76fd-6GvKlO"
+      input: "This is a typical sentence.",
+      expectation: "This is a lacipyt .ecnetnes"
     },
     {
-      input: "D0n$c sed 0di0 du1",
-      expectation: "D0nc sed 0di0 du1"
+      input: "The dog is big.",
+      expectation: "The dog is big."
     }
   ];
 
