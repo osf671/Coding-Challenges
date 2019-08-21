@@ -1,7 +1,12 @@
 // Challenge link here: https://edabit.com/challenge/rgdT9sZ4QhsKhaSw9
 function missingNum(arr) {
-  // put your code here
-  // don't touch anything else
+  var sum = 0;
+  var missingNum = 55 - sum;
+  for (var i = 0; i < arr.length; i++) {
+    var curNumber = arr[i];
+    sum += curNumber;
+  }
+  return missingNum;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
