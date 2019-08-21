@@ -9,7 +9,7 @@ function doubleLetters(word) {
     }
     previousLetter = curLetter;
   }
-  console.log(doubleLetterExists)
+  return(doubleLetterExists)
 }
 
 console.log(setupAndRun(doubleLetters).map(r => r.message));
