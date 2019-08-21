@@ -1,18 +1,17 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
   var previousLetter;
-  var doubleLetterExists= false;
+  var doubleLetterExists = false;
   for (var i = 0; i < word.length; i++) {
     var curLetter = word[i];
     if (previousLetter && previousLetter == curLetter) {
-      doubleLetterExists= true;
+      doubleLetterExists = true;
     }
     previousLetter = curLetter;
   }
-  console.log(doubleLetterExists)
+  // console.log(doubleLetterExists);  YOU HAD THIS
+  return doubleLetterExists; // I ADDED THIS
 }
-
-console.log(setupAndRun(doubleLetters).map(r => r.message));
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -42,6 +41,9 @@ console.log(setupAndRun(doubleLetters).map(r => r.message));
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+const results = setupAndRun(doubleLetters);
+console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", results);
 function setupAndRun(func) {
   const tests = [
     {
