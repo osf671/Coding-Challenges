@@ -9,8 +9,7 @@ function doubleLetters(word) {
     }
     previousLetter = curLetter;
   }
-  // console.log(doubleLetterExists);  YOU HAD THIS
-  return doubleLetterExists; // I ADDED THIS
+  return doubleLetterExists;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
