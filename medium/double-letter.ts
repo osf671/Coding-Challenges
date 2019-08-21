@@ -1,7 +1,15 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
-  // put your code here
-  // don't touch anything else ellayna sara marie chenoweth
+  var previousLetter;
+  var doubleLetterExists= false;
+  for (var i = 0; i < word.length; i++) {
+    var curLetter = word[i];
+    if (previousLetter && previousLetter == curLetter) {
+      doubleLetterExists= true;
+    }
+    previousLetter = curLetter
+  }
+  console.log(doubleLetterExists)
 }
 
 console.log(setupAndRun(doubleLetters).map(r => r.message));
