@@ -7,7 +7,7 @@ function doubleLetters(word) {
     if (previousLetter && previousLetter == curLetter) {
       doubleLetterExists= true;
     }
-    previousLetter = curLetter
+    previousLetter = curLetter;
   }
   console.log(doubleLetterExists)
 }
