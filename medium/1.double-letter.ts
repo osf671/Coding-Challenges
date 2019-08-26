@@ -1,7 +1,6 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
-  // put your code here
-  // don't touch anything else
+  console.log(word)
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
