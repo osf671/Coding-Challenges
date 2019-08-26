@@ -1,19 +1,9 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
-  let lastLetter;
   for (let i = 0; i < word.length; i++) {
-    let currentLetter = word[i];
-    if (loopLetter(lastLetter, currentLetter) == true) {
+    if (word[i] === word[i+1]) {
       return true;
     }
-    lastLetter = currentLetter;
-  } 
-  return false;
-}
-
-function loopLetter(lastLetter, currentLetter) {
-  if (!!lastLetter && currentLetter === lastLetter) {
-    return true;
   }
   return false;
 }
@@ -52,7 +42,7 @@ console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "loop",
+      input: "Boop",
       expectation: true
     },
     {
