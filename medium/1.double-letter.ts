@@ -1,7 +1,7 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
   for (let i = 0; i < word.length; i++) {
-    if (word[i] === word[i+1]) {
+    if ( i + 1 < word.length && word[i] === word[i+1]) {
       return true;
     }
   }
