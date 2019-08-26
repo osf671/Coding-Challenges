@@ -1,8 +1,21 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
+  let lastLetter;
   for (let i = 0; i < word.length; i++) {
-    
+    let currentLetter = word[i];
+    if (loopLetter(lastLetter, currentLetter) == true) {
+      return true;
+    }
+    lastLetter = currentLetter;
+  } 
+  return false;
+}
+
+function loopLetter(lastLetter, currentLetter) {
+  if (!!lastLetter && currentLetter === lastLetter) {
+    return true;
   }
+  return false;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
