@@ -2,54 +2,26 @@
 function reverse(str) {
   const wordArray = str.split(' ');
   var finalArray = [];
+
+
   for (var i = 0; i < wordArray.length; i++) {
     var curWord = wordArray[i];
-    finalArray.push(handleWords(curWord));
+
+    if (curWord.length >= 5) {
+      var newWord = '';
+
+      for (var x = 0; x < curWord.length; x++) {
+        var curChar = curWord[x];
+        newWord = curChar + newWord;
+      }
+      finalArray.push(newWord)
+    } else {
+      finalArray.push(curWord)
+    }
   }
   return finalArray.join(' ')
 }
 
-function handleWords(word) {
-  if (word.length >= 5) {
-    return reverseWord(word);
-  } else {
-    return word;
-  }
-}
-
-function reverseWord(word) {
-  var newWord = '';
-  for (var i = 0; i < word.length; i++) {
-    var curChar = word[i];
-    newWord = curChar + newWord;
-  }
-  return newWord;
-}
-
-
-
-
-
-// const wordArray = str.split(' ');
-
-// var finalArray = [];
-//   for (var i = 0; i < wordArray.length; i++){
-//     var curWord= wordArray[i];
-
-//     if (curWord.length >= 5){
-//       var newWord= '';
-
-//       for (var x = 0; x < curWord.length; x++){
-//         var curChar= curWord[x];
-//         newWord = curChar + newWord;
-
-//       }
-//       finalArray.push(newWord);
-//     } else {
-//       finalArray.push(curWord);
-//     }
-//   }
-//   return finalArray.join(' ');
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

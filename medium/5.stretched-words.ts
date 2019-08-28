@@ -1,7 +1,16 @@
 // Challenge link here: https://edabit.com/challenge/X4WDm4ZroqPZpiqgA
 function unstretch(word) {
-  // put your code here
-  // don't touch anything else
+  var finalWord = '';
+  var previousLetter;
+  for (var i = 0; i < word.length; i++) {
+    var curLetter = word[i];
+    if (previousLetter && previousLetter !== curLetter) {
+      finalWord.push(curLetter)
+    }
+    previousLetter == curLetter
+
+  }
+  return finalWord
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
