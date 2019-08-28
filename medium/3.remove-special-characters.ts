@@ -1,8 +1,39 @@
 // Challenge link here: https://edabit.com/challenge/k7CwrsKPHrEL8h4z6
+// function removeSpecialCharacters(str) {
+      // let newString = str
+      // .replace('!', '').replace('%', '')
+      // .replace('$', '').replace('(', '')
+      // .replace(')', '').replace('.', '')
+      // .replace('~', '').replace('^', '')
+      // .replace('+', '').replace('=', '')
+      // .replace('/', '').replace(';', '')
+      // .replace('#', '').replace('@', '')
+      // return newString;
+
+  // Alternative solution
 function removeSpecialCharacters(str) {
-  // put your code here
-  // don't touch anything else
+  let newString = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== '!' && str[i] !== '$' && str[i] !== '(' 
+    && str[i] !== '*' && str[i] !== ')' && str[i] !== '^'
+    && str[i] !== '%' && str[i] !== '.')
+    newString += str[i];
+  }
+  return newString
 }
+  
+// function removeSpecialCharacters(str) {
+
+// }
+        
+        
+      
+      
+    
+    
+
+
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
