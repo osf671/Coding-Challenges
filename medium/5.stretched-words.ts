@@ -5,12 +5,12 @@ function unstretch(word) {
   for (var i = 0; i < word.length; i++) {
     var curLetter = word[i];
     if (previousLetter && previousLetter !== curLetter) {
-      finalWord.push(curLetter)
+      finalWord += curLetter;
     }
-    previousLetter == curLetter
+    previousLetter == curLetter;
 
   }
-  return finalWord
+  return finalWord;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
