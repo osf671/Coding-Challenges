@@ -1,8 +1,20 @@
 // Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
+
 function reverse(str) {
-  // put your code here
-  // don't touch anything else
+  const strArray = str.split(' ');
+  let reversed = [];
+  for (let i = 0; i < strArray.length; i++) {
+    let currentWord = strArray[i];
+     reversed.push(processWord(currentWord));
+  } return reversed.join(' ');
 }
+
+function processWord(word) {
+    if (word.length >= 5) {
+      return word.split('').reverse().join('');
+    } else return word;
+  }
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
