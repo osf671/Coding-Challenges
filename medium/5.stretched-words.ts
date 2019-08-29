@@ -1,8 +1,18 @@
 // Challenge link here: https://edabit.com/challenge/X4WDm4ZroqPZpiqgA
 function unstretch(word) {
-  // put your code here
-  // don't touch anything else
-}
+    let firstChar = word[0]
+    let newWord = firstChar + ''; 
+    // let newWord = '';
+    for (let i = 1; i < word.length; i++) {
+      let currentChar = word[i];
+      let nextChar = word[i-1];
+      // if (i == 0 || nextChar !== currentChar)
+      if (currentChar !== nextChar) {
+        newWord += currentChar
+      } 
+    } return newWord;
+  }
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
