@@ -1,5 +1,5 @@
 // Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
-
+// Solution 1
 function reverse(str) {
   const strArray = str.split(' ');
   let reversed = [];
@@ -10,9 +10,12 @@ function reverse(str) {
 }
 
 function processWord(word) {
-    if (word.length >= 5) {
-      return word.split('').reverse().join('');
-    } else return word;
+    let newWord = '';
+    for (let i = word.length-1; i >= 0; i--) {
+      if (word.length >= 5) {
+        newWord += word[i];
+      } else return word;
+    } return newWord;
   }
 
 ////////////////////////////////////////////////////////////
