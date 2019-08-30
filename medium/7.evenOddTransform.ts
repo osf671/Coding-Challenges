@@ -1,8 +1,18 @@
 // Challenge link here: https://edabit.com/challenge/MsNyn2xmTzRWjFuMT
 function evenOddTransform(arr, n) {
-  // put your code here
-  // don't touch anything else
+  let finalArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      let numberMinus = arr[i] - 2 * n;
+      finalArr.push(numberMinus);
+    } else if (arr[i] % 2 !== 0) {
+      let numberPlus = arr[i] + 2 * n;
+      finalArr.push(numberPlus)
+    }
+  } 
+  return finalArr;
 }
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
