@@ -1,7 +1,11 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
-  // put your code here
-  // don't touch anything else
+  for (let i = 0; i < word.length; i++) {
+    if ( i + 1 < word.length && word[i].toUpperCase() === word[i+1].toUpperCase()) {
+      return true;
+    }
+  }
+  return false;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -38,7 +42,7 @@ console.log("DEBUGGING INFO: \r\n", res);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "loop",
+      input: "Boop",
       expectation: true
     },
     {
