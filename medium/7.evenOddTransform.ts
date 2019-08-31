@@ -2,11 +2,12 @@
 function evenOddTransform(arr, n) {
   let finalArr = [];
   for (let i = 0; i < arr.length; i++) {
+    let currentNumber = arr[i]
     if (arr[i] % 2 === 0) {
-      let numberMinus = arr[i] - 2 * n;
+      let numberMinus = currentNumber - 2 * n;
       finalArr.push(numberMinus);
     } else if (arr[i] % 2 !== 0) {
-      let numberPlus = arr[i] + 2 * n;
+      let numberPlus = currentNumber + 2 * n;
       finalArr.push(numberPlus)
     }
   } 
