@@ -1,8 +1,13 @@
 // Challenge link here: https://edabit.com/challenge/K595YtSroZHAAzvhW
 function isPalindrome(str) {
-  // put your code here
-  // don't touch anything else
+  let reversedStr = str.split('').reverse().join('');
+  if (str === '' || str === reversedStr) {
+    return true;
+  } 
+  return false;
 }
+
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
