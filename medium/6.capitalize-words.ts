@@ -1,23 +1,8 @@
 // Challenge link here: https://edabit.com/challenge/LvtsCQNpx7CwHGubf
 function makeTitle(str) {
-  let finalStr = '';
-  let lastChar;
-  for (let i = 0; i < str.length; i++) {
-    let currentChar = str[i];
-    const modifiedChar = captializeFirstLetter(currentChar, lastChar);
-    finalStr += modifiedChar;
-    lastChar = currentChar;
-  } 
-  return finalStr;
+  // put your code here
+  // don't touch anything else
 }
-
-function captializeFirstLetter(currentLetter, lastLetter) {
-  if (lastLetter == undefined || lastLetter === ' ') {
-    return currentLetter.toUpperCase();
-  } 
-  return currentLetter;
-}
-
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
