@@ -1,23 +1,9 @@
 // Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
 // Solution 1
 function reverse(str) {
-  const strArray = str.split(' ');
-  let reversed = [];
-  for (let i = 0; i < strArray.length; i++) {
-    let currentWord = strArray[i];
-     reversed.push(processWord(currentWord));
-  } return reversed.join(' ');
+  // put your code here
+  // don't touch anything else
 }
-
-function processWord(word) {
-  let newWord = '';
-  for (let i = word.length-1; i >= 0; i--) {
-    let currentChar = word[i];
-      if (word.length >= 5) {
-        newWord += currentChar;
-      } else return word;
-    } return newWord;
-  }
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

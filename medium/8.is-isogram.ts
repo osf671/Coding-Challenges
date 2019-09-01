@@ -1,18 +1,8 @@
 // Challenge link here: https://edabit.com/challenge/rJPgai5r5XdXeQmLg
 function isIsogram(str) {
-  let sameCase = str.toLowerCase();
-  let strArray = sameCase.split('');
-  let sorted = strArray.sort();
-  for (let i = 0; i < str.length; i++) {
-    let currentChar = sorted[i];
-    let nextChar = sorted[i+1];
-    if (i + 1 < str.length && currentChar === nextChar) {
-      return false;
-    } 
-  } 
-  return true;
+  // put your code here
+  // don't touch anything else
 }
-
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
