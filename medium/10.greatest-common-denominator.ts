@@ -1,7 +1,22 @@
 // Challenge link here: https://edabit.com/challenge/3HPSLLjh8Go5QPq3C
 function greatestCommonDenominator(int1, int2) {
-  // put your code here
-  // don't touch anything else
+  let factorArr = [];
+  let GCD;
+  let minOfTwo = findSmallerNum(int2, int2);
+  for (let factor = 1; factor <= minOfTwo; factor++) {
+    if (int1 % factor === 0 && int2 % factor === 0) {
+      factorArr.push(factor);
+    }
+  }
+  let GCD = factorArr[factorArr.length-1];
+  return GCD;
+}
+
+function findSmallerNum(number1, number2) {
+  if (number1 < number2) {
+    return number1;
+  }
+  return number2;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
