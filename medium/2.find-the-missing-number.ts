@@ -1,8 +1,21 @@
 // Challenge link here: https://edabit.com/challenge/rgdT9sZ4QhsKhaSw9
 function missingNum(arr) {
-  // put your code here
-  // don't touch anything else
+  let sumOfArray = arr.reduce((a, b) => a + b); 
+  let missingNumber =  55 - sumOfArray ; 
+  return missingNumber; 
 }
+// Alternative solution
+// function missingNum(arr) {
+//   let sumOfArray = 0;
+//   for (let number of arr) {
+//     sumOfArray += number;
+//   }
+//   let missingNumber = 55 - sumOfArray;
+//   return missingNumber; 
+// }
+
+
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
