@@ -1,7 +1,13 @@
 // Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
 function doubleLetters(word) {
-  // put your code here
-  // don't touch anything else
+  for (let i = 0; i < word.length; i++) {
+    let currentChar = word[i];
+    let nextChar = word[i+1];
+    if (i + 1 < word.length && currentChar === nextChar) {
+      return true;
+    }
+  }
+  return false;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
