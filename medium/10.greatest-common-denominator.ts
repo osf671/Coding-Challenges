@@ -8,7 +8,7 @@ function greatestCommonDenominator(int1, int2) {
       factorArr.push(factor);
     }
   }
-  let GCD = factorArr[factorArr.length-1];
+  GCD = factorArr[factorArr.length - 1];
   return GCD;
 }
 

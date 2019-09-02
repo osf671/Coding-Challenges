@@ -6,7 +6,7 @@
 //   } else if (str[0] !== str[str.length - 1]) {
 //     return false;
 
-//   }  
+//   }
 //   return isPalindrome(str.slice(1, str.length-1))
 //   }
 
@@ -15,9 +15,9 @@ function isPalindrome(str) {
     return true;
   }
   let firstChar = str[0];
-  let lastChar = str[str.length-1];
+  let lastChar = str[str.length - 1];
   if (firstChar === lastChar) {
-    return isPalindrome(str.slice(1, str.length-1))
+    return isPalindrome(str.slice(1, str.length - 1));
   }
   return false;
 }
