@@ -1,7 +1,15 @@
 // Challenge link here: https://edabit.com/challenge/LvtsCQNpx7CwHGubf
 function makeTitle(str) {
-  // put your code here
-  // don't touch anything else
+  let newStr = '';
+  let lastChar;
+  for (let i = 0; i < str.length; i++) {
+    let currentChar = str[i];
+    let lastChar = str[i-1];
+    if ( !lastChar || lastChar === ' ') {
+      newStr += currentChar.toUpperCase();
+    } else newStr += currentChar
+  }
+  return newStr;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
