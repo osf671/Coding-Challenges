@@ -1,24 +1,32 @@
 // Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
 // Solution 1
-function reverse(str) {
-  const strArray = str.split(" ");
-  let reversed = [];
-  for (let i = 0; i < strArray.length; i++) {
-    let currentWord = strArray[i];
-    reversed.push(processWord(currentWord));
-  }
-  return reversed.join(" ");
-}
+// function reverse(str) {
+//   const strArray = str.split(" ");
+//   let reversed = [];
+//   for (let i = 0; i < strArray.length; i++) {
+//     let currentWord = strArray[i];
+//     reversed.push(processWord(currentWord));
+//   }
+//   return reversed.join(" ");
+// }
 
-function processWord(word) {
-  let newWord = "";
-  for (let i = word.length - 1; i >= 0; i--) {
-    let currentChar = word[i];
-    if (word.length >= 5) {
-      newWord += currentChar;
-    } else return word;
-  }
-  return newWord;
+// function processWord(word) {
+//   let newWord = "";
+//   for (let i = word.length - 1; i >= 0; i--) {
+//     let currentChar = word[i];
+//     if (word.length >= 5) {
+//       newWord += currentChar;
+//     } else return word;
+//   }
+//   return newWord;
+// }
+
+// Solution 2
+function reverse(str) {
+  return str
+  .split(' ')
+  .map(x => x.length >= 5 ? x.split('').reverse().join('') : x, 0)
+  .join(' ')
 }
 
 ////////////////////////////////////////////////////////////
