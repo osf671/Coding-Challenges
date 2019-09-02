@@ -1,8 +1,13 @@
 // Challenge link here: https://edabit.com/challenge/TWwNf9xxyvWGjEn3n
 function identicalSubArrays(arr) {
-  // put your code here
-  // don't touch anything else
+  return arr.reduce((accumulator, curA) => {
+    if (curA.every(x => x === curA[0])) {
+      accumulator += 1 } 
+      return accumulator;
+  }, 0)
 }
+
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
