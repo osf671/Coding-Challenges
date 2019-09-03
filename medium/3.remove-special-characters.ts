@@ -1,18 +1,18 @@
 // Challenge link here: https://edabit.com/challenge/k7CwrsKPHrEL8h4z6
-function missingNum(arr) {
-  let sumOfArray = arr.reduce((a, b) => a + b);
-  let missingNumber = 55 - sumOfArray;
-  return missingNumber;
+// Solution 1
+function removeSpecialCharacters(str) {
+  let specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '.'];
+  let finalStr = '';
+  for (let i = 0; i < str.length; i++) {
+    let currentChar = str[i];
+    if (!specialChar.includes(currentChar)) {
+      finalStr += currentChar
+    }
+  }
+  return finalStr;
 }
-// Alternative solution
-// function missingNum(arr) {
-//   let sumOfArray = 0;
-//   for (let number of arr) {
-//     sumOfArray += number;
-//   }
-//   let missingNumber = 55 - sumOfArray;
-//   return missingNumber;
-// }
+
+
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
