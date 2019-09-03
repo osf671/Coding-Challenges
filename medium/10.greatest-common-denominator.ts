@@ -1,15 +1,7 @@
-// Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
-function doubleLetters(word) {
-  var previousLetter;
-  var doubleLetterExists = false;
-  for (var i = 0; i < word.length; i++) {
-    var curLetter = word[i];
-    if (previousLetter && previousLetter == curLetter) {
-      doubleLetterExists = true;
-    }
-    previousLetter = curLetter;
-  }
-  return doubleLetterExists;
+// Challenge link here: https://edabit.com/challenge/3HPSLLjh8Go5QPq3C
+function greatestCommonDenominator(int1, int2) {
+  // put your code here
+  // don't touch anything else
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -40,31 +32,31 @@ function doubleLetters(word) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const res = setupAndRun(doubleLetters);
-console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", res);
+const results = setupAndRun(greatestCommonDenominator);
+console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", results);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "Boop",
-      expectation: true
+      input: [32, 8],
+      expectation: 8
     },
     {
-      input: "yummy",
-      expectation: true
+      input: [8, 12],
+      expectation: 4
     },
     {
-      input: "orange",
-      expectation: false
+      input: [17, 13],
+      expectation: 1
     },
     {
-      input: "munchkin",
-      expectation: false
+      input: 9086,
+      expectation: 14
     }
   ];
 
   return tests.map(({ input, expectation }) => {
-    const functionReturn = func(input);
+    const functionReturn = func(input[0], input[1]);
     const passed = functionReturn === expectation;
     const message =
       input + (passed ? ": THE TEST PASSED" : ": THE TEST FAILED");

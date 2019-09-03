@@ -1,15 +1,7 @@
-// Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
-function doubleLetters(word) {
-  var previousLetter;
-  var doubleLetterExists = false;
-  for (var i = 0; i < word.length; i++) {
-    var curLetter = word[i];
-    if (previousLetter && previousLetter == curLetter) {
-      doubleLetterExists = true;
-    }
-    previousLetter = curLetter;
-  }
-  return doubleLetterExists;
+// Challenge link here: https://edabit.com/challenge/z9NGF7CJvXfk9y8eB
+function fib(n) {
+  // put your code here
+  // don't touch anything else
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -40,26 +32,26 @@ function doubleLetters(word) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const res = setupAndRun(doubleLetters);
-console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", res);
+const results = setupAndRun(fib);
+console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", results);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "Boop",
-      expectation: true
+      input: 0,
+      expectation: 0
     },
     {
-      input: "yummy",
-      expectation: true
+      input: 1,
+      expectation: 1
     },
     {
-      input: "orange",
-      expectation: false
+      input: 8,
+      expectation: 21
     },
     {
-      input: "munchkin",
-      expectation: false
+      input: 12,
+      expectation: 144
     }
   ];
 

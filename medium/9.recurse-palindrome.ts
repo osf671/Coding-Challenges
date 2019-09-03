@@ -1,15 +1,7 @@
-// Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
-function doubleLetters(word) {
-  var previousLetter;
-  var doubleLetterExists = false;
-  for (var i = 0; i < word.length; i++) {
-    var curLetter = word[i];
-    if (previousLetter && previousLetter == curLetter) {
-      doubleLetterExists = true;
-    }
-    previousLetter = curLetter;
-  }
-  return doubleLetterExists;
+// Challenge link here: https://edabit.com/challenge/K595YtSroZHAAzvhW
+function isPalindrome(str) {
+  // put your code here
+  // don't touch anything else
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -40,25 +32,25 @@ function doubleLetters(word) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const res = setupAndRun(doubleLetters);
-console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", res);
+const results = setupAndRun(isPalindrome);
+console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", results);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "Boop",
+      input: "abcba",
       expectation: true
     },
     {
-      input: "yummy",
+      input: "b",
       expectation: true
     },
     {
-      input: "orange",
-      expectation: false
+      input: "",
+      expectation: true
     },
     {
-      input: "munchkin",
+      input: "ba",
       expectation: false
     }
   ];

@@ -1,4 +1,5 @@
 // Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
+// Solution 1
 function reverse(str) {
   const wordArray = str.split(' ');
   var finalArray = [];

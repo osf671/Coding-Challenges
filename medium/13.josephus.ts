@@ -1,15 +1,7 @@
-// Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
-function doubleLetters(word) {
-  var previousLetter;
-  var doubleLetterExists = false;
-  for (var i = 0; i < word.length; i++) {
-    var curLetter = word[i];
-    if (previousLetter && previousLetter == curLetter) {
-      doubleLetterExists = true;
-    }
-    previousLetter = curLetter;
-  }
-  return doubleLetterExists;
+// Challenge link here: https://edabit.com/challenge/EcEN8FnruPEj6x5k4
+function josephus(n, i) {
+  // put your code here
+  // don't touch anything else
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -40,26 +32,26 @@ function doubleLetters(word) {
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-const res = setupAndRun(doubleLetters);
-console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", res);
+const results = setupAndRun(josephus);
+console.log("THE RESULTS: \r\n", ...results.map(r => r.message + "\r\n"));
+console.log("DEBUGGING INFO: \r\n", results);
 function setupAndRun(func) {
   const tests = [
     {
-      input: "Boop",
-      expectation: true
+      input: [41, 3],
+      expectation: 31
     },
     {
-      input: "yummy",
-      expectation: true
+      input: [35, 11],
+      expectation: 18
     },
     {
-      input: "orange",
-      expectation: false
+      input: [11, 1],
+      expectation: 11
     },
     {
-      input: "munchkin",
-      expectation: false
+      input: [2, 2],
+      expectation: 1
     }
   ];
 
