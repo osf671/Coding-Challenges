@@ -25,7 +25,7 @@
 function reverse(str) {
   return str
   .split(' ')
-  .map(x => x.length >= 5 ? x.split('').reverse().join('') : x, 0)
+  .map(char => char.length >= 5 ? char.split('').reverse().join('') : char)
   .join(' ')
 }
 
