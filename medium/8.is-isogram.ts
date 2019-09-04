@@ -1,17 +1,28 @@
 // Challenge link here: https://edabit.com/challenge/rJPgai5r5XdXeQmLg
+// function isIsogram(str) {
+//   let sameCase = str.toLowerCase();
+//   let strArray = sameCase.split("");
+//   let sorted = strArray.sort();
+//   for (let i = 0; i < str.length; i++) {
+//     let currentChar = sorted[i];
+//     let nextChar = sorted[i + 1];
+//     if (i + 1 < str.length && currentChar === nextChar) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
 function isIsogram(str) {
-  let sameCase = str.toLowerCase();
-  let strArray = sameCase.split("");
-  let sorted = strArray.sort();
-  for (let i = 0; i < str.length; i++) {
-    let currentChar = sorted[i];
-    let nextChar = sorted[i + 1];
-    if (i + 1 < str.length && currentChar === nextChar) {
-      return false;
-    }
-  }
-  return true;
+  return str.toLowerCase()
+  .split('')
+  .sort()
+  .reduce(function(acc, char, i, arr) { 
+    if (acc === true && char !== arr[i-1]) {
+      return true;
+    } return false}, true)
 }
+
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
