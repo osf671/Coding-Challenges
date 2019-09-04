@@ -1,7 +1,29 @@
 // Challenge link here: https://edabit.com/challenge/MsNyn2xmTzRWjFuMT
 function evenOddTransform(arr, n) {
-  // put your code here
-  // don't touch anything else
+  // create newArray
+  // for loop 
+  // loop over n times
+  // create newNum
+  // loop within that over arr
+  // create curNum 
+  // determine whether or not its even or odd (module)
+  // if so subtract curNum by 2
+  // then newNum += curNum
+  // if not add 2 to curNum
+  // then newNum +=curNum
+  // push newNum into newArray
+
+  for (var x = 0; x < n; x++) {
+    for (var y = 0; y < arr.length; y++) {
+      var curNum = arr[y];
+      if (curNum % 2 == 0) {
+        arr[y] = curNum - 2;
+      } else {
+        arr[y] = curNum + 2;
+      }
+    }
+  }
+return arr;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -61,7 +83,7 @@ function setupAndRun(func) {
     } else {
       functionReturn = func(input);
     }
-    const passed = functionReturn === expectation;
+    const passed = functionReturn == expectation;
     const message =
       input + (passed ? ": THE TEST PASSED" : ": THE TEST FAILED");
     return {
