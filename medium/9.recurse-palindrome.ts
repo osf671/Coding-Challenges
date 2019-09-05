@@ -1,7 +1,14 @@
 // Challenge link here: https://edabit.com/challenge/K595YtSroZHAAzvhW
 function isPalindrome(str) {
-  // put your code here
-  // don't touch anything else
+  var lowCaseStr = str.toLowerCase();
+  var letterArr= lowCaseStr.split("");
+  var reverseArr= letterArr.reverse();
+  var finalStr= reverseArr.join("")
+
+  return lowCaseStr == finalStr;
+
+
+
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
