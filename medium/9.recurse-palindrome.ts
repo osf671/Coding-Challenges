@@ -10,6 +10,19 @@ function isPalindrome(str) {
 
 
 }
+
+//function isPalindrome(str: string) {
+ // if (str.length < 2) {
+  //  return true;
+  //} else if (str[0] == str[str.length - 1]) {
+    //const newString = str.substr(1, str.length - 2)
+    //console.log(newString)
+    //return isPalindrome(newString);
+  //}
+  //return false;
+//}
+//console.log(isPalindrome('tacocat'));
+//console.log(isPalindrome('ellayna'));
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

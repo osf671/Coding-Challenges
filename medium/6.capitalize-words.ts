@@ -1,5 +1,5 @@
 // Challenge link here: https://edabit.com/challenge/LvtsCQNpx7CwHGubf
-function makeTitle(str) {
+function makeTitle(str: string) {
   const wordArray = str.split(' ')
   console.log(wordArray)
 
@@ -15,9 +15,8 @@ function makeTitle(str) {
     var capitalLetter = firstLetter.toUpperCase()
     console.log(capitalLetter)
 
-    curWord.replace(curWord[0], capitalLetter)
-    console.log(curWord)
-
+    finalArray.push(curWord.replace(curWord[0], capitalLetter))
+    
   }
   return finalArray.join(' ')
 }

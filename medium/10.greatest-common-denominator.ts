@@ -1,7 +1,31 @@
 // Challenge link here: https://edabit.com/challenge/3HPSLLjh8Go5QPq3C
+
+// 8, 32
 function greatestCommonDenominator(int1, int2) {
-  // put your code here
-  // don't touch anything else
+  var smallestInteger;
+  var biggestInteger;
+
+
+  if (int1 < int2) {
+    smallestInteger = int1;
+    biggestInteger= int2;
+  } else {
+    smallestInteger = int2;
+    biggestInteger = int1;
+    //8
+  }
+  for (var i = 1; i < smallestInteger; i++) {
+    if (smallestInteger % i == 0) {
+      var denominator = smallestInteger/i;
+      if (biggestInteger % denominator== 0){
+        return denominator;
+       
+      }
+      
+    }
+  }
+  console.log('here')
+  return 1
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -48,10 +72,6 @@ function setupAndRun(func) {
     {
       input: [17, 13],
       expectation: 1
-    },
-    {
-      input: 9086,
-      expectation: 14
     }
   ];
 

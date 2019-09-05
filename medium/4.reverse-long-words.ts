@@ -2,25 +2,31 @@
 // Solution 1
 function reverse(str) {
   const wordArray = str.split(' ');
+  console.log(wordArray)
+
+
   var finalArray = [];
 
+  for (var x = 0; x < wordArray.length; x++) {
+    var curWord = wordArray[x];
+    var newWord = '';
 
-  for (var i = 0; i < wordArray.length; i++) {
-    var curWord = wordArray[i];
 
     if (curWord.length >= 5) {
-      var newWord = '';
 
-      for (var x = 0; x < curWord.length; x++) {
-        var curChar = curWord[x];
+      for (var y = 0; y < curWord.length; y++) {
+        var curChar = curWord[y];
+
         newWord = curChar + newWord;
       }
-      finalArray.push(newWord)
+
+      finalArray.push(newWord);
     } else {
-      finalArray.push(curWord)
+      finalArray.push(curWord);
     }
+
   }
-  return finalArray.join(' ')
+  return finalArray.join(' ');
 }
 
 ////////////////////////////////////////////////////////////
