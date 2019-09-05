@@ -13,16 +13,25 @@
 //   return true;
 // }
 
+// Solutoion 2 Not good
+// function isIsogram(str) {
+//   return str.toLowerCase()
+//   .split('')
+//   .sort()
+//   .reduce(function(acc, char, i, arr) { 
+//     if (acc === true && char !== arr[i-1]) {
+//       return true;
+//     } return false; }, true)
+// }
+
+// Solution 3
 function isIsogram(str) {
   return str.toLowerCase()
-  .split('')
-  .sort()
-  .reduce(function(acc, char, i, arr) { 
-    if (acc === true && char !== arr[i-1]) {
-      return true;
-    } return false}, true)
+    .split('')
+    .sort()
+    .filter((item, index, arr) => item !== arr[index-1])
+    .length === str.length
 }
-
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
