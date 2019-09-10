@@ -1,6 +1,5 @@
 // Challenge link here: https://edabit.com/challenge/rJPgai5r5XdXeQmLg
 function isIsogram(str) {
-
   for (var x = 0; x < str.length; x++) {
     var curLetter = str[x];
     var numTimesFound = 0;
@@ -9,13 +8,37 @@ function isIsogram(str) {
       if (curLetter.toUpperCase() == curChar.toUpperCase()) {
         numTimesFound += 1;
       }
-    }
-    if (numTimesFound > 1){
-      return false;
-    }
+  } if (numTimesFound > 1) {
+    return false;
   }
-
+}
 return true;
+
+
+
+
+
+
+
+
+
+
+
+//   for (var x = 0; x < str.length; x++) {
+//     var curLetter = str[x];
+//     var numTimesFound = 0;
+//     for (var y = 0; y < str.length; y++) {
+//       var curChar = str[y];
+//       if (curLetter.toUpperCase() == curChar.toUpperCase()) {
+//         numTimesFound += 1;
+//       }
+//     }
+//     if (numTimesFound > 1){
+//       return false;
+//     }
+//   }
+
+// return true;
 }
 
 

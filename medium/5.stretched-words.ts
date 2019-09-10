@@ -1,16 +1,46 @@
 // Challenge link here: https://edabit.com/challenge/X4WDm4ZroqPZpiqgA
 function unstretch(word) {
-  var finalWord = '';
-  var previousLetter;
-  for (var i = 0; i < word.length; i++) {
-    var curLetter = word[i];
-    if (previousLetter !== curLetter) {
-      finalWord += curLetter;
-    }
-    previousLetter = curLetter;
+ var previousLetter;
 
-  }
-  return finalWord;
+ var finalWord= '';
+
+ for(var i = 0; i < word.length; i++){
+   var curLetter= word[i];
+   if (previousLetter != curLetter){
+    finalWord += curLetter
+   }
+   previousLetter = curLetter;
+ }
+ 
+ return finalWord;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  // var finalWord = '';
+  // var previousLetter;
+  // for (var i = 0; i < word.length; i++) {
+  //   var curLetter = word[i];
+  //   if (previousLetter !== curLetter) {
+  //     finalWord += curLetter;
+  //   }
+  //   previousLetter = curLetter;
+
+  // }
+  // return finalWord;
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

@@ -1,24 +1,50 @@
 // Challenge link here: https://edabit.com/challenge/LvtsCQNpx7CwHGubf
 function makeTitle(str: string) {
-  const wordArray = str.split(' ')
-  console.log(wordArray)
+  const wordArray = str.split(' ');
 
   var finalArray = [];
 
-  for (var x = 0; x < wordArray.length; x++) {
-    var curWord = wordArray[x];
-    console.log(curWord)
-
-    var firstLetter = curWord[0];
-    console.log(firstLetter)
-
-    var capitalLetter = firstLetter.toUpperCase()
-    console.log(capitalLetter)
+  for (var i = 0; i < wordArray.length; i++) {
+    var curWord = wordArray[i];
+  
+    var firstLetter= curWord[0];
+    var capitalLetter= firstLetter.toUpperCase();
 
     finalArray.push(curWord.replace(curWord[0], capitalLetter))
-    
+
   }
+
   return finalArray.join(' ')
+
+
+
+
+
+
+
+
+
+
+
+  // const wordArray = str.split(' ')
+  // console.log(wordArray)
+
+  // var finalArray = [];
+
+  // for (var x = 0; x < wordArray.length; x++) {
+  //   var curWord = wordArray[x];
+  //   console.log(curWord)
+
+  //   var firstLetter = curWord[0];
+  //   console.log(firstLetter)
+
+  //   var capitalLetter = firstLetter.toUpperCase()
+  //   console.log(capitalLetter)
+
+  //   finalArray.push(curWord.replace(curWord[0], capitalLetter))
+
+  // }
+  // return finalArray.join(' ')
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

@@ -1,32 +1,68 @@
 // Challenge link here: https://edabit.com/challenge/wPNzJEJebN2mewcqY
 // Solution 1
 function reverse(str) {
-  const wordArray = str.split(' ');
-  console.log(wordArray)
+  const wordArray = str.split(' ')
+ 
+  var finalArray= [];
 
-
-  var finalArray = [];
-
-  for (var x = 0; x < wordArray.length; x++) {
-    var curWord = wordArray[x];
-    var newWord = '';
-
-
-    if (curWord.length >= 5) {
-
-      for (var y = 0; y < curWord.length; y++) {
-        var curChar = curWord[y];
-
+  for (var i = 0; i < wordArray.length; i++) {
+    var curWord = wordArray[i];
+    var newWord= [];
+    if (curWord.length > 5) {
+      for (var x = 0; x < curWord.length; x++){
+        var curChar = curWord[x];
         newWord = curChar + newWord;
+        console.log(newWord)
       }
-
-      finalArray.push(newWord);
-    } else {
-      finalArray.push(curWord);
+      console.log(newWord)
+      finalArray.push(newWord) 
+    } else if (curWord.length < 5){
+      finalArray.push(curWord)
     }
 
   }
-  return finalArray.join(' ');
+  return finalArray.join(' ')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // const wordArray = str.split(' ');
+  // console.log(wordArray)
+
+
+  // var finalArray = [];
+
+  // for (var x = 0; x < wordArray.length; x++) {
+  //   var curWord = wordArray[x];
+  //   var newWord = '';
+
+
+  //   if (curWord.length >= 5) {
+
+  //     for (var y = 0; y < curWord.length; y++) {
+  //       var curChar = curWord[y];
+
+  //       newWord = curChar + newWord;
+  //     }
+
+  //     finalArray.push(newWord);
+  //   } else {
+  //     finalArray.push(curWord);
+  //   }
+
+  // }
+  // return finalArray.join(' ');
 }
 
 ////////////////////////////////////////////////////////////

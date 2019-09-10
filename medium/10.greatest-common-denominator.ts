@@ -5,28 +5,70 @@ function greatestCommonDenominator(int1, int2) {
   var smallestInteger;
   var biggestInteger;
 
-
-  if (int1 < int2) {
-    smallestInteger = int1;
-    biggestInteger= int2;
+  if (int1 > int2){
+    smallestInteger= int2;
+    biggestInteger= int1;
   } else {
-    smallestInteger = int2;
-    biggestInteger = int1;
-    //8
+    smallestInteger= int1;
+    biggestInteger= int2;
   }
-  for (var i = 1; i < smallestInteger; i++) {
-    if (smallestInteger % i == 0) {
-      var denominator = smallestInteger/i;
-      if (biggestInteger % denominator== 0){
+
+  for (var x = 1; x < smallestInteger; x++){
+    if (smallestInteger % x == 0){
+      var denominator= smallestInteger/x; 
+      if ( biggestInteger % denominator== 0 ){
         return denominator;
-       
       }
-      
-    }
+    }  
+    
   }
-  console.log('here')
-  return 1
+  return 1;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function greatestCommonDenominator(int1, int2) {
+//   var smallestInteger;
+//   var biggestInteger;
+
+
+//   if (int1 < int2) {
+//     smallestInteger = int1;
+//     biggestInteger= int2;
+//   } else {
+//     smallestInteger = int2;
+//     biggestInteger = int1;
+//     //8
+//   }
+//   for (var i = 1; i < smallestInteger; i++) {
+//     if (smallestInteger % i == 0) {
+//       var denominator = smallestInteger/i;
+//       if (biggestInteger % denominator== 0){
+//         return denominator;
+       
+//       }
+      
+//     }
+//   }
+//   console.log('here')
+//   return 1
+// }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
