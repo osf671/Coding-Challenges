@@ -5,11 +5,21 @@ class car {
     public color: string = "blue",
     public make: string,
     public model?: string,
-    public year?: number
+    public year?: number,
+    public battery?: string
   ) {
+    this.color = `${this.color[0].toUpperCase()}${this.color
+      .substr(1)
+      .toLowerCase()}`;
+
     this.make = `${this.make[0].toUpperCase()}${this.make
       .substr(1)
       .toLowerCase()}`;
+
+    this.model = `${this.model[0].toUpperCase()}${this.model
+      .substr(1)
+      .toLowerCase()}`;
+    
     this.id = Math.floor(Math.random() * 100);
   }
 
@@ -19,28 +29,41 @@ class car {
 
   aboutMe() {
     const constructAboutMeString = () => {
-      return `color: ${this.color} - make: ${this.make}`;
+      return `color: ${this.color}
+make: ${this.make}`;
     };
     console.log(constructAboutMeString());
   }
 }
 
-class honda extends car {
-  constructor(color: string, year: number, model: string) {
-    super(color, "honda", model, year);
+class toyota extends car {
+  constructor(color: string, year: number, battery: string) {
+    super(color, "toyota",'prius', year, battery);
+  }
+
+  honk() {
+    super.honk();
+    console.log("beep, beep, beep, beep");
   }
 }
+const myToyota = new toyota(undefined, 2008, 'hybrid')
+console.log(myToyota)
 
-class civic extends honda {
+class prius extends toyota {
   public speed = 0;
-  constructor(color: string, year: number) {
-    super(color, year, "Civic");
+  public solar_roof;
+  constructor(color: string, battery: string, solar_roof: boolean) {
+    super(color, 2019, battery);
+    this.solar_roof = solar_roof;
   }
 
   goFaster() {
     this.speed = this.speed + 10;
   }
 }
+
+const myPrius = new prius('red', 2018, 'hybrid', true)
+console.log(myPrius)
 
 class explorer extends car {
   constructor(color: string, year: number) {
@@ -53,7 +76,7 @@ const mySecondCar = new car("black", "jeep", "wranger", 2004);
 myCar.honk();
 myCar.aboutMe();
 
-const c = new civic("white", 2012);
+const c = new prius("white", 2012, 'hybrid', true);
 
 console.log(c);
 console.log(c.speed);
@@ -69,3 +92,4 @@ console.log(e);
 
 const arr1 = [1, 2, 3, 4, 5];
 const arr = new Array(1, 2, 3);
+console.log(arr)
