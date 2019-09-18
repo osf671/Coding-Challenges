@@ -62,7 +62,7 @@ class prius extends toyota {
   }
 }
 
-const myPrius = new prius('red', 2018, 'hybrid', true)
+const myPrius = new prius('red', 'hybrid', true)
 console.log(myPrius)
 
 class explorer extends car {
@@ -76,7 +76,7 @@ const mySecondCar = new car("black", "jeep", "wranger", 2004);
 myCar.honk();
 myCar.aboutMe();
 
-const c = new prius("white", 2012, 'hybrid', true);
+const c = new prius("white", 'hybrid', false);
 
 console.log(c);
 console.log(c.speed);
