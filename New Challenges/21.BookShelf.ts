@@ -45,6 +45,8 @@ class Book {
   console.log(WP.Title)
   let x = HP.Author;
   HP.Author = 'Tony'
+  console.log(HP)
+  
 
   
 
