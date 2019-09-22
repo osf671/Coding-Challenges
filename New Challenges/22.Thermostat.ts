@@ -1,6 +1,6 @@
 class Thermostat {
 
-    constructor(public farenheit) {
+    constructor(public farenheit: number) {
       this.farenheit = farenheit;
     }
   
