@@ -1,17 +1,21 @@
 // Challenge link here: https://edabit.com/challenge/k7CwrsKPHrEL8h4z6
 // Solution 1
-function removeSpecialCharacters(str) {
-  let specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '.'];
-  let finalStr = '';
-  for (let i = 0; i < str.length; i++) {
-    let currentChar = str[i];
-    if (!specialChar.includes(currentChar)) {
-      finalStr += currentChar
-    }
-  }
-  return finalStr;
-}
+// function removeSpecialCharacters(str) {
+//   let specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '.'];
+//   let finalStr = '';
+//   for (let i = 0; i < str.length; i++) {
+//     let currentChar = str[i];
+//     if (!specialChar.includes(currentChar)) {
+//       finalStr += currentChar
+//     }
+//   }
+//   return finalStr;
+// }
 
+function removeSpecialCharacters(str) {
+  let specialRegex = /[^!@#$%^&*().+=]/ig
+  return str.match(specialRegex).join('');
+}
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
