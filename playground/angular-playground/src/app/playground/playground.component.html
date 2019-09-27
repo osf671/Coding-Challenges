@@ -1,5 +1,27 @@
-<div *ngIf="!!data" style="border: 1px solid black">
-  <div style="border: 2px solid blue" *ngFor="let row of data">
-    {{ row.first_name }} {{ row.last_name }}
+<h1>Angular-Playground</h1>
+  <div>
+    <button class="btn btn-primary" [class.active]="isActive">Save</button>
+  </div>
+<img src="{{ imageUrl }}" />
+<table>
+  <tr>
+    <td [attr.colspan]="colSpan"></td>
+  </tr>
+</table>
+<div>
+  <ul>
+    <li *ngFor='let playground of playgrounds'>
+      {{ playground | lowercase }}
+    </li>
+  </ul>
+</div>
+<h2>{{ title }}</h2> 
+<div *ngIf="!!data" style="border: 1px solid rgb(153, 25, 25)">
+  <div style="border: 4px solid gray">
+    <ul>
+      <li *ngFor='let row of data'>
+        <pre> {{ row.email | uppercase}}, {{ row.id }}</pre>
+      </li>
+    </ul>
   </div>
 </div>
