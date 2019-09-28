@@ -1,23 +1,41 @@
 <h1>Angular-Playground</h1>
-<div>
-  <button class="btn btn-primary" [class.active]="isActive">Save</button>
-</div>
-<img src="{{ imageUrl }}" />
-<table>
-  <tr>
-    <td [attr.colspan]="colSpan"></td>
-  </tr>
-</table>
 
+<img src="{{ imageUrl }}" />
 <div>
-  <ul>
-    <li *ngFor="let playground of playgrounds">
-      {{ playground | lowercase }}
-    </li>
-  </ul>
+  <button (click)="messWithData()">Playgrounds</button>
 </div>
-<h2>{{ title }}</h2>
-<button (click)="getData()">get data</button>
+<div style="border: 2px solid black">
+  <div style="display: flex; flex-direction: column; flex-wrap: wrap; border: 4px solid gray; justify-content: center">
+    <ul>
+      <div
+        style="border: 1px dotted black"
+        *ngFor="let playground of playgrounds"
+      >
+      <div
+          style="border: 1px solid black"
+        >
+          <div style="border: 1px solid red; order: 3">
+            Name: {{ playground.first_name }} {{ playground.last_name }}
+          </div>
+          <div style="border: 1px solid rgb(27, 141, 141); order: 3">
+           ID: {{ playground.id }} 
+          </div>
+          <div style="border: 1px solid blue; order: 2">
+           Email: {{ playground.email }}
+          </div>
+          <div style="border: 1px solid yellow; order: -1">
+           Gender: {{ playground.gender }}
+          </div>
+          <!-- <div style="border: 1px solid yellow; order: -1">
+           age: {{ playground.age }}
+          </div> -->
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<!-- <button (click)="getData()">get data</button>
 <div *ngIf="!!data" style="border: 1px solid rgb(153, 25, 25)">
   <div style="border: 4px solid gray">
     <ul>
@@ -31,11 +49,14 @@
           <div style="border: 1px solid red; order: 3">
             name: {{ row.first_name }} {{ row.last_name }}
           </div>
+          <div style="border: 1px solid rgb(27, 141, 141); order: 3">
+            ID: {{ row.id }} 
+          </div>
           <div style="border: 1px solid blue; order: 2">
             Email: {{ row.email }}
           </div>
           <div style="border: 1px solid yellow; order: -1">
-            gender: {{ row.gender }}
+            Gender: {{ row.gender }}
           </div>
           <div style="border: 1px solid yellow; order: -1">
             age: {{ row.age }}
@@ -44,4 +65,4 @@
       </div>
     </ul>
   </div>
-</div>
+</div> -->

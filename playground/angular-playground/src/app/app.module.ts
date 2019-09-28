@@ -13,7 +13,6 @@ import { Playground1Component } from './playground1/playground1.component';
     AppComponent,
     PlaygroundComponent,
     Playground1Component,
-    
   ],
   imports: [
     BrowserModule,
