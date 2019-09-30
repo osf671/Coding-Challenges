@@ -1,0 +1,5 @@
+<div *ngIf="!!data" style="border: 1px solid black">
+  <div style="border: 2px solid blue" *ngFor="let row of data">
+    {{ row.first_name }} {{ row.last_name }}
+  </div>
+</div>
