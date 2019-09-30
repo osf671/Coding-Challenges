@@ -1,29 +1,22 @@
 // Challenge link here: https://edabit.com/challenge/MsNyn2xmTzRWjFuMT
 function evenOddTransform(arr, n) {
-  // create newArray
-  // for loop 
-  // loop over n times
-  // create newNum
-  // loop within that over arr
-  // create curNum 
-  // determine whether or not its even or odd (module)
-  // if so subtract curNum by 2
-  // then newNum += curNum
-  // if not add 2 to curNum
-  // then newNum +=curNum
-  // push newNum into newArray
+  var finalArray = [...arr]
 
   for (var x = 0; x < n; x++) {
-    for (var y = 0; y < arr.length; y++) {
-      var curNum = arr[y];
-      if (curNum % 2 == 0) {
-        arr[y] = curNum - 2;
+    finalArray = [...finalArray].map(item => {
+      if (item % 2 == 0) {
+        return item - 2;
       } else {
-        arr[y] = curNum + 2;
+        return item + 2;
       }
-    }
+    })
   }
-return arr;
+
+  return finalArray;
+
+
+
+
 }
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

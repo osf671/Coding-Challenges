@@ -8001,25 +8001,48 @@ const data: any[] = [
   }
 ];
 
-// Challenge link here: https://edabit.com/challenge/YHLaB8itA9tEDN5TG
-// function doubleLetters(word) {
-//   var previousLetter;
-//   var doubleLetterExists = false;
-//   for (var i = 0; i < word.length; i++) {
-//     var curLetter = word[i];
-//     if (previousLetter && previousLetter == curLetter) {
-//       doubleLetterExists = true;
-//     }
-//     previousLetter = curLetter;
-//   }
-//   return doubleLetterExists;
-// }
+
+const nameName = data
+.map(item => { if (item.gender == 'Male') { return item.first_name[0] == 'D' + item.first_name.substr[1]} else {return item.first_name[0] == 'B' + item.first_name.substr(1)}})
+
+console.log(nameName)
+
+
+
+// const specificNames = data
+
+// const ipAddress1 = specificNames
+//   .filter(item => item.ip_address[0] == '1')
+          
+// const sirNames = ipAddress1
+//   .map(item => { if (item.gender == 'Male') { return 'sir ' + item.first_name.substr(0) } else { return 'Maam ' + item.first_name.substr(0) } })
+
+
+// console.log(sirNames)
+
+// const domain = new Set(data
+//                .map(item => item.email.split('@')[1]))
+//                console.log(domain)
+
+
+// const totalId = data
+//                 .filter(item => item.gender == 'Male')
+//                 .reduce((total,cv) => {
+//                   return total + cv.id
+//                 }, 0)
+//                 console.log(totalId)
+
+
+// const allWomen= data
+//                 .filter(item => item.gender == 'Female' && item.first_name[0].toLowerCase() == 'b');
+// console.log(allWomen)
+
 
 // const numbers = [1,2,3,4,5,6,7,8,9,10];
 // const newNumbers = numbers.map((value) => value + 4);
 
-// const evenNumbers = numbers.filter(item => item %2 ===0);
-// console.log(evenNumbers)
+//  const evenNumbers = numbers.filter(item => item %2 ===0);
+//  console.log(evenNumbers)
 
 // const total = numbers.reduce((pv, cv) => {
 //   return pv + cv;
@@ -8029,10 +8052,10 @@ const data: any[] = [
 // const someEven = numbers.some(item => item %2 ===0);
 // console.log(someEven);
 
-const lessThan100 = data
-  .filter(item => item.id < 100 && item.first_name[0].toLowerCase() == "a")
-  .map(item => ({ ...item, first_name: "s" + item.first_name.substr(1) }));
-console.log(lessThan100);
+// const lessThan100 = data
+//   .filter(item => item.id < 100 && item.first_name[0].toLowerCase() == "a")
+//   .map(item => ({ ...item, first_name: "s" + item.first_name.substr(1) }));
+// console.log(lessThan100);
 
 // const changeName = data
 //                     .filter(p => p.first_name.toLowerCase() == 'vassili')
@@ -8076,42 +8099,3 @@ console.log(lessThan100);
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////
-const res = setupAndRun(doubleLetters);
-console.log("THE RESULTS: \r\n", ...res.map(r => r.message + "\r\n"));
-console.log("DEBUGGING INFO: \r\n", res);
-function setupAndRun(func) {
-  const tests = [
-    {
-      input: "Boop",
-      expectation: true
-    },
-    {
-      input: "yummy",
-      expectation: true
-    },
-    {
-      input: "orange",
-      expectation: false
-    },
-    {
-      input: "munchkin",
-      expectation: false
-    }
-  ];
-
-  return tests.map(({ input, expectation }) => {
-    const functionReturn = func(input);
-    const passed = functionReturn === expectation;
-    const message =
-      input + (passed ? ": THE TEST PASSED" : ": THE TEST FAILED");
-    return {
-      input,
-      expectation,
-      functionReturn,
-      passed,
-      message
-    };
-  });
-}

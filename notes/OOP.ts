@@ -91,7 +91,7 @@ class explorer extends car {
 const myCar = new car("white", "acura", "rsx", 2019);
 const mySecondCar = new car("black", "jeep", "wranger", 2004);
 myCar.honk();
-myCar.aboutMe();
+console.log(myCar.aboutMe();
 console.log(myCar)
 const c = new civic("white", 2012);
 

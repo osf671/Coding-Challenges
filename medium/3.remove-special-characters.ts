@@ -1,19 +1,10 @@
 // Challenge link here: https://edabit.com/challenge/k7CwrsKPHrEL8h4z6
 function removeSpecialCharacters(str) {
-  var newString = '';
 
-  for (var i = 0; i < str.length; i++) {
-    var curChar = str[i];
-    if (curChar != '!' && curChar != '@' && curChar != '#' && curChar != '$' && curChar != '%' && curChar != '^' && curChar != '&' && curChar != '*' && curChar != '/' && curChar != '(' && curChar != ')' && curChar != '.' && curChar != ',' && curChar != '') {
-      newString += curChar;
-    }
-  }
-
-  return newString;
-
-
-
-
+return str
+          .split()
+          .filter(item => item != '!' && item != '@' && item != '#' && item != '$' && item != '%' && item != '^' && item != '&' && item != '*' && item != '(' && item != ')' && item != '=' && item != ',' && item != '/')
+          .join()
 
 
 

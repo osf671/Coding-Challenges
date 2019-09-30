@@ -1,23 +1,11 @@
 // Challenge link here: https://edabit.com/challenge/X4WDm4ZroqPZpiqgA
 function unstretch(word) {
- var previousLetter;
-
- var finalWord= '';
-
- for(var i = 0; i < word.length; i++){
-   var curLetter= word[i];
-   if (previousLetter != curLetter){
-    finalWord += curLetter
-   }
-   previousLetter = curLetter;
- }
+var finalWord = word
+                .split('')
+                .filter((item, i, arr)=>  item != arr[i-1])
+                .join('')
  
  return finalWord;
- 
- 
- 
- 
- 
  
  
  

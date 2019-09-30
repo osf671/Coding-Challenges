@@ -1,18 +1,15 @@
 // Challenge link here: https://edabit.com/challenge/rJPgai5r5XdXeQmLg
-function isIsogram(str) {
-  for (var x = 0; x < str.length; x++) {
-    var curLetter = str[x];
-    var numTimesFound = 0;
-    for (var y = 0; y < str.length; y++) {
-      var curChar = str[y];
-      if (curLetter.toUpperCase() == curChar.toUpperCase()) {
-        numTimesFound += 1;
-      }
-  } if (numTimesFound > 1) {
-    return false;
+function isIsogram(str: string) {
+  var res = [];
+  for (var x = 1; x < str.length; x++) {
+    var curChar = str[x];
+    res.push(str
+      .split('')
+      .every((item) => item.toUpperCase() != curChar.toUpperCase()))
   }
+  console.log(res)
+  return res.every((val,i,arr)=> val == arr[-1])
 }
-return true;
 
 
 
@@ -23,22 +20,21 @@ return true;
 
 
 
+  //   for (var x = 0; x < str.length; x++) {
+  //     var curLetter = str[x];
+  //     var numTimesFound = 0;
+  //     for (var y = 0; y < str.length; y++) {
+  //       var curChar = str[y];
+  //       if (curLetter.toUpperCase() == curChar.toUpperCase()) {
+  //         numTimesFound += 1;
+  //       }
+  //     }
+  //     if (numTimesFound > 1){
+  //       return false;
+  //     }
+  //   }
 
-//   for (var x = 0; x < str.length; x++) {
-//     var curLetter = str[x];
-//     var numTimesFound = 0;
-//     for (var y = 0; y < str.length; y++) {
-//       var curChar = str[y];
-//       if (curLetter.toUpperCase() == curChar.toUpperCase()) {
-//         numTimesFound += 1;
-//       }
-//     }
-//     if (numTimesFound > 1){
-//       return false;
-//     }
-//   }
-
-// return true;
+  // return true;
 }
 
 

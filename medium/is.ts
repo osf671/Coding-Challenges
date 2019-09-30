@@ -1,13 +1,13 @@
 class person {
-    id: number;
+    private id: number;
 
     constructor(
         public ethnicity: string,
         public gender: string,
         public age: number,
-        public name: string
+        public lastName: string
     ) {
-        this.name = `${this.name[0].toUpperCase()}${this.name
+        this.lastName = `${this.lastName[0].toUpperCase()}${this.lastName
             .substr(1)
             .toLowerCase()}`;
         this.id = Math.floor(Math.random() * 100)
