@@ -1,5 +1,5 @@
-<div *ngIf="!!data" >
-  <div class='info'>
-    {{ row.first_name }} {{ row.last_name }} 
+<div id='container' *ngIf="!!data" >
+  <div class='info' *ngFor="let row of data">
+    {{ row.first_name }} {{ row.last_name }} {{ row.email }} {{ row.gender }} {{ row.ip_address }}
   </div>
 </div>
