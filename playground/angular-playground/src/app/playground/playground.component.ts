@@ -1,6 +1,7 @@
-import { getTestBed } from "@angular/core/testing";
+
 import { PlaygroundsService } from "./../playgrounds.service";
 import { Component, OnInit } from "@angular/core";
+
 
 @Component({
   selector: "playground",
@@ -9,15 +10,15 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PlaygroundComponent implements OnInit {
   data;
-  imageUrl =
-    "https://i5.walmartimages.com/asr/d560bd0c-2a84-4306-b3e9-40a42d37289f_1.ed31767b441300cf35eb6dba56394690.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF";
-  playgrounds;
+  imageUrl;
+  playgrounds = null;
+  err = null;
 
-  constructor(service: PlaygroundsService) {
-    this.playgrounds = service.getPlaygrounds();
+  constructor(private playgroundService: PlaygroundsService) {
+
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   calculateAge(lastName: string) {
     return lastName.length;
@@ -26,28 +27,35 @@ export class PlaygroundComponent implements OnInit {
   transformPerson(person: any) {
     return {
       ...person,
-      age: this.calculateAge(person.last_name), 
+      age: this.calculateAge(person.last_name),
     };
   }
 
   messWithData() {
-    let newData = this.playgrounds.filter(data => data.id % 2 === 0)
-                           .filter(data => data.gender === 'male');
-    return newData;
+    this.playgroundService.getPlaygrounds()
+      .then((res: any[]) => {
+        // debugger;
+        this.playgrounds = res.filter(data => data.id % 2 === 0)
+          .filter(data => data.gender === 'Male')
+          .map(person => this.transformPerson(person));
+      })
+      .catch(err => { this.err = err })
+
+    // debugger;
   }
 
- 
 
-  // getData() {
-  //   fetch("https://api.mockaroo.com/api/b05e9af0?count=30&key=c3e16910")
-  //     .then(res => res.json())
-  //     .then((incomingData: any[]) => {
-  //       this.data = incomingData.filter(data => data.id > 15)
-  //                               .map(data => this.transformPerson(data))
-  //       return incomingData;
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // }
+  getData() {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then(res => res.json())
+      .then((incomingData: any[]) => {
+        this.data = incomingData;
+        // .filter(data => data.id > 15)
+        // .map(data => this.transformPerson(data))
+        return incomingData;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 }

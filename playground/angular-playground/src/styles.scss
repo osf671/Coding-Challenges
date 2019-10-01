@@ -1,4 +1,249 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-body { padding: 20px }
+body {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.parent {
+  height: 120vh;
+  border: 20px solid rgb(0, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.child1 {
+  width: 150px;
+  height: 150px;
+  background: blue;
+  order: 1;
+  font-size: 30px;
+  color: white;
+}
+
+.child2 {
+  width: 150px;
+  height: 150px;
+  background: red;
+  order: 2;
+  font-size: 30px;
+  color: white;
+  align-self: center;
+}
+
+.child3 {
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  order: 4;
+  font-size: 30px;
+  color: white;
+  align-self: flex-end;
+}
+
+.child4 {
+  width: 150px;
+  height: 150px;
+  background: green;
+  order: 3;
+  font-size: 30px;
+  color: white;
+}
+
+.form-row {
+  padding: 10px 0;
+  display: flex;
+}
+
+.form-row label {
+  padding-right: 10px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+section {
+  background: rgb(165, 226, 198);
+  color: gray;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px dotted red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+li {
+  border: 1px solid black;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.flex1 {
+  order: 1;
+  flex: 1 1 5em;
+  border: 3px dotted red;
+}
+
+.flex2 {
+  order: 2;
+  flex: 3 2 5em;
+  border: 3px dotted blue;
+}
+
+.column-layout {
+  max-width: 1400px;
+  background-color: #fff;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-column {
+  flex: 2;
+  order: 2;
+}
+
+.sidebar-one {
+  flex: 1;
+  order: 1;
+}
+
+.sidebar-two {
+  flex: 1;
+  order: 3;
+}
+
+.call-outs-container {
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+}
+
+.call-out {
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  flex-basis: 30%;
+}
+
+@media (min-width: 900px) {
+  .call-outs-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.call-out:nth-child(1) {
+  background-color: #c0dbe2;
+}
+.call-out:nth-child(2) {
+  background-color: #cdf1c3;
+}
+.call-out:nth-child(3) {
+  background-color: #ccb9da;
+}
+
+.fixed-size-container {
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+  background-color: white;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fixed-size {
+  width: 150px;
+  height: 100px;
+  background-color: #990b47;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.banner {
+  height: 400px;
+  max-width: 700px;
+  margin: 40px auto 40px auto;
+  background-color: #2a2a2a;
+  display: flex;
+}
+
+.center-me-please {
+  color: #fff;
+  font-size: 50px;
+  margin: auto;
+}
+
+.equal-height-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.first {
+  background-color: #fff;
+  padding: 20px;
+  flex: 1;
+}
+
+.second {
+  background-color: yellow;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.second-a {
+  background-color: #c0dbe2;
+  flex: 1;
+}
+.second-b {
+  background-color: #418ea1;
+  flex: 1;
+}
+.second-c {
+  background-color: #89bd29;
+  flex: 1;
+}
+
+.playgroundUser {
+  background: lightcyan;
+  margin: auto;
+  padding: 5px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.post-container {
+  max-width: 1600px;
+  background: rgb(214, 200, 194);
+  border: solid lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.post-item {
+  border: solid black;
+  margin: 20px;
+  flex: 1;
+}
