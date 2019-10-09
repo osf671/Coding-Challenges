@@ -10,23 +10,26 @@ export class UserGridComponent implements OnInit {
     {
       first: "Doug",
       last: "Shannon",
-      img_url: "https://i.imgur.com/EazDpL3.gif",
+      img_url: "https://i.imgur.com/z8O2Af0b.jpg",
       email: "Doug@gmail.com",
-      gender: 'Male'
+      gender: 'Male',
+      status: "Going to the mall. #textMeeeee"
     },
     {
       first: "Ellayna",
       last: "Chenoweeeth",
-      img_url: "https://i.imgur.com/e6PcuPS.jpg",
+      img_url: "https://i.imgur.com/qkuiQf2.jpg",
       email: "ellayna@gmail.com",
-      gender: 'Female'
+      gender: 'Female',
+      status: "Out for coffee"
     },
     {
       first: "Tony",
       last: "Chou",
       img_url: "https://i.imgur.com/2hBebTU.jpg",
       email: "tony@gmail.com",
-      gender: 'Male'
+      gender: 'Male',
+      status: "Just got a new job!"
     }
   ];
 

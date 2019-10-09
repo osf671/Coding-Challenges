@@ -11,6 +11,7 @@ export class UserCardComponent implements OnInit {
   @Input() img_url: string;
   @Input() email: string;
   @Input() gender: string;
+  @Input() status: string;
 
   constructor() {}
 

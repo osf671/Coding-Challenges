@@ -4,7 +4,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   MatButtonModule,
   MatSliderModule,
-  MatCardModule
+  MatCardModule,
+  MatSlideToggleModule,
 } from "@angular/material";
 import { UserGridComponent } from "./user-grid/user-grid.component";
 import { UserCardComponent } from "./user-card/user-card.component";
@@ -15,7 +16,8 @@ import { UserCardComponent } from "./user-card/user-card.component";
     CommonModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSlideToggleModule,
   ],
   exports: [UserCardComponent]
 })

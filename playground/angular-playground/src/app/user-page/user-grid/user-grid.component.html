@@ -1,10 +1,13 @@
-<div style="display:flex">
+<div id= "info">
   <app-user-card
     *ngFor="let u of users"
     [first]="u.first"
     [last]="u.last"
     [img_url]="u.img_url"
     style="margin: 5px;"
+    [email]= "u.email"
+    [gender]="u.gender"
+    [status]='u.status'
   >
   </app-user-card>
 </div>

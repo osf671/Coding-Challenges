@@ -4,12 +4,14 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { PlaygroundComponent } from "./playground/playground.component";
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   MatButtonModule,
   MatSliderModule,
   MatCardModule,
-  MatRadioModule
+  MatRadioModule,
+
 } from "@angular/material";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { TonysComponentComponent } from "./tonys-component/tonys-component.component";
@@ -33,6 +35,7 @@ import { UserCardComponent } from "./user-page/user-card/user-card.component";
     MatCardModule,
     UserPageModule,
     MatRadioModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
