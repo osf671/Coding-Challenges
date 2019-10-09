@@ -1,0 +1,10 @@
+<div style="display:flex">
+  <app-user-card
+    *ngFor="let u of users"
+    [first]="u.first"
+    [last]="u.last"
+    [img_url]="u.img_url"
+    style="margin: 5px;"
+  >
+  </app-user-card>
+</div>
