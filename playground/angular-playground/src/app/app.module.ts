@@ -1,36 +1,40 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PlaygroundComponent } from './playground/playground.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatCardModule} from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatStepperModule} from '@angular/material/stepper';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { PlaygroundComponent } from "./playground/playground.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {
+  MatButtonModule,
+  MatSliderModule,
+  MatCardModule,
+  MatRadioModule
+} from "@angular/material";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { TonysComponentComponent } from "./tonys-component/tonys-component.component";
+import { UserPageModule } from "./user-page/user-page.module";
+import { UserCardComponent } from "./user-page/user-card/user-card.component";
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    LandingPageComponent,
+    TonysComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     MatSliderModule,
-    MatDividerModule,
     MatCardModule,
-    MatListModule,
-    MatFormFieldModule,
+    UserPageModule,
     MatRadioModule,
-    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
