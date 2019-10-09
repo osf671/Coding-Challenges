@@ -1,5 +1,16 @@
-<div id='container' *ngIf="!!data" >
-  <div class='info' *ngFor="let row of data">
-    {{ row.first_name }} {{ row.last_name }} {{ row.email }} {{ row.gender }} {{ row.ip_address }}
-  </div>
-</div>
+
+
+<mat-card-title class='info' *ngFor="let row of data" >
+ {{row.first_name}}
+  <mat-card-subtitle >
+     {{ row.last_name }} 
+  </mat-card-subtitle>
+  <mat-card-content>
+    {{ row.email }} | {{ row.gender }} | {{ row.ip_address}}
+  </mat-card-content>
+  <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Helpful</mat-radio-button>
+      <mat-radio-button value="2">Not helpful</mat-radio-button>
+    </mat-radio-group>
+</mat-card-title>
+

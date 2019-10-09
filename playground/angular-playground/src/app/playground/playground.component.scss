@@ -1,7 +1,6 @@
 #container {
 border: 9px double darkgreen;
 border-radius: 5%;
-background-color: salmon;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -13,19 +12,12 @@ margin: px;
 
 .info {
 border: 10px solid gold;
-background: palevioletred;
 border-radius: 4%;
-background-color: cadetblue;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
-max-width: 250px;
-min-height: 150px;
+max-width: 300px;
+min-height: 250px;
 margin: 15px;
-text-align: start;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-color: rgb(70, 66, 66);
-text-decoration-line: overline;  
-text-decoration: alpha($color: #000000);
 }
