@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 
 import { PlaygroundsService } from "./../playgrounds.service";
 import { Component, OnInit } from "@angular/core";
@@ -13,12 +14,47 @@ export class PlaygroundComponent implements OnInit {
   imageUrl;
   playgrounds = null;
   err = null;
+  isChecked = true;
+  colors = [
+    { id: 1, name: 'Red' },
+    { id: 2, name: 'Green' },
+    { id: 3, name: 'Yellow' },
+    { id: 4, name: 'Blue' }
+  ];
+  color = 2; 
+  minDate = new Date(2019, 1, 1);
+  maxDate = new Date(2019, 10, 31);
 
-  constructor(private playgroundService: PlaygroundsService) {
+  categories = [
+    { name: 'Beginner' },
+    { name: 'Intermediate' },
+    { name: 'Advanced' },
+    { name: 'Diabolical' },
+  ];
+  isLoading = false;
+
+  constructor(private data1: PlaygroundsService) {
 
   }
 
-  ngOnInit() { }
+
+  selectCategory(category) {
+    this.categories
+      .filter(c => c != category)
+      .forEach(c => c['selected'] = false)
+
+      category.selected = !category.selected;
+  }
+
+  onChange($event) {
+    console.log($event);
+  }
+
+  ngOnInit() { 
+    this.data1.getUsers().subscribe(
+      data => this.playgrounds = data
+    )
+  }
 
   calculateAge(lastName: string) {
     return lastName.length;
@@ -31,18 +67,18 @@ export class PlaygroundComponent implements OnInit {
     };
   }
 
-  messWithData() {
-    this.playgroundService.getPlaygrounds()
-      .then((res: any[]) => {
-        // debugger;
-        this.playgrounds = res.filter(data => data.id % 2 === 0)
-          .filter(data => data.gender === 'Male')
-          .map(person => this.transformPerson(person));
-      })
-      .catch(err => { this.err = err })
+  // messWithData() {
+  //   this.playgroundService.getPlaygrounds()
+  //     .then((res: any[]) => {
+  //       // debugger;
+  //       this.playgrounds = res.filter(data => data.id % 2 === 0)
+  //         .filter(data => data.gender === 'Male')
+  //         .map(person => this.transformPerson(person));
+  //     })
+  //     .catch(err => { this.err = err })
 
-    // debugger;
-  }
+  //   // debugger;
+  // }
 
 
   getData() {
