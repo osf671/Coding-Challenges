@@ -1,0 +1,13 @@
+.container {
+    background-color: #79a4b1;
+    Margin-bottom: 20px;
+    text-align: center;
+    padding: 1em;
+}
+
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+}

@@ -4,9 +4,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatCardModule, MatSliderModule, MatButtonModule} from '@angular/material';
 import { UserGridComponent } from './user-grid/user-grid.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
-  declarations: [UserGridComponent, UserCardComponent],
+  declarations: [UserGridComponent, UserCardComponent, UserProfileComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,

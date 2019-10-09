@@ -1,6 +1,17 @@
-<div style="display: flex">
-    <app-user-card *ngFor="let user of users" [user]="user">
+<body>
 
-    </app-user-card>
-</div>
+    <div class="container">
+        <header>
+            <h2>Tensure Apprentice List</h2>
+        </header>
+    </div>
+
+    <div class="users">
+            <app-user-card *ngFor="let user of users" [user]="user" style="margin: 5px">
+        
+            </app-user-card>
+
+    </div>
+
+</body>
 
