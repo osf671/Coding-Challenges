@@ -1,23 +1,38 @@
-<body>
-
-    <div class="container">
-        <header>
-            <h2>Tensure Apprentice List</h2>
-        </header>
-    </div>
-
-    <div class="users">
-        <app-user-card *ngFor="let user of users" [user]="user" style="margin: 5px">
-
-        </app-user-card>
-
-    </div>
-
-</body>
-
-<div class="maincontainer">
-    <div class="thecard">
-        <div class="thefront"></div>
-        <div class="theback"></div>
-    </div>
+<div class="container">
+  <header>
+    <h2>Tensure Apprentice List</h2>
+  </header>
 </div>
+
+<!-- <pre>{{ users | json }}</pre> -->
+
+<ng-container *ngFor="let user of users">
+  <app-user-card
+    *ngIf="user.showFront === true; else back"
+    class="users"
+    [user]="user"
+    (profileClicked)="toggleCardForUser(user)"
+    style="margin: 5px"
+  ></app-user-card>
+  <ng-template #back>
+    <app-user-profile></app-user-profile>
+  </ng-template>
+</ng-container>
+
+<!-- <div class="container">
+  <header>
+    <h2>Tensure Apprentice List</h2>
+  </header>
+</div>
+
+<div class="users">
+  <app-user-card *ngFor="let user of users" [user]="user" style="margin: 5px">
+  </app-user-card>
+</div> -->
+
+<!-- <div class="maincontainer">
+  <div class="thecard">
+    <div class="thefront"></div>
+    <div class="theback"></div>
+  </div>
+</div> -->

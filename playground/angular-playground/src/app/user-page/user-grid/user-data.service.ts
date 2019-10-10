@@ -1,15 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class UserDataService {
-
-  constructor() { }
+  constructor() {}
 
   getData() {
-    return fetch("https://api.mockaroo.com/api/0c501690?count=10&key=ec35dd50")
-      .then(res => res.json())
-      }
+    return fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json());
+  }
 }
-
