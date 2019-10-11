@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
@@ -11,7 +12,9 @@ export class UserCardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   profileButtonClicked() {
     this.profileClicked.emit();

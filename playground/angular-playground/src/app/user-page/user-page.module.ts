@@ -5,9 +5,10 @@ import { MatCardModule, MatSliderModule, MatButtonModule} from '@angular/materia
 import { UserGridComponent } from './user-grid/user-grid.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserPhotoComponent } from './user-photo/user-photo.component';
 
 @NgModule({
-  declarations: [UserGridComponent, UserCardComponent, UserProfileComponent],
+  declarations: [UserGridComponent, UserCardComponent, UserProfileComponent, UserPhotoComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,

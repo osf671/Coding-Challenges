@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
   @Input() user: any;
-  @Output() returnClicked: EventEmitter<null> = new EventEmitter;
+  @Output() returnClicked: EventEmitter<null> = new EventEmitter();
 
   constructor() { }
 
