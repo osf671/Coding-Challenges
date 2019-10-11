@@ -24,7 +24,7 @@ import { UserCardComponent } from "./user-page/user-card/user-card.component";
     AppComponent,
     PlaygroundComponent,
     LandingPageComponent,
-    TonysComponentComponent
+    TonysComponentComponent,
   ],
   imports: [
     BrowserModule,

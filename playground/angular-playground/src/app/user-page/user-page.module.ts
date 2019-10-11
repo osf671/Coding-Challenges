@@ -9,15 +9,17 @@ import {
 } from "@angular/material";
 import { UserGridComponent } from "./user-grid/user-grid.component";
 import { UserCardComponent } from "./user-card/user-card.component";
+import { ArticleComponent } from "./article/article.component";
 
 @NgModule({
-  declarations: [UserGridComponent, UserCardComponent],
+  declarations: [UserGridComponent, UserCardComponent, ArticleComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
     MatSlideToggleModule,
+    
   ],
   exports: [UserCardComponent]
 })
