@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-user-profile',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
+  @Input() user: any;
+  @Output() returnClicked: EventEmitter<null> = new EventEmitter;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  returnButtonClicked() {
+    this.returnClicked.emit();
   }
 
 }

@@ -5,20 +5,22 @@
 </div>
 
 <!-- <pre>{{ users | json }}</pre> -->
-
+<div class="users">
 <ng-container *ngFor="let user of users">
   <app-user-card
     *ngIf="user.showFront === true; else back"
-    class="users"
     [user]="user"
     (profileClicked)="toggleCardForUser(user)"
     style="margin: 5px"
   ></app-user-card>
   <ng-template #back>
-    <app-user-profile></app-user-profile>
+    <app-user-profile
+    [user]="user"
+    (returneClicked)="toggleCardForUser(user)"
+    style="margin: 5px"></app-user-profile>
   </ng-template>
 </ng-container>
-
+</div>
 <!-- <div class="container">
   <header>
     <h2>Tensure Apprentice List</h2>
