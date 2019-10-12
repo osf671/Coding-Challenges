@@ -1,4 +1,4 @@
-
+import { UserPhotoService } from './user-photo.service';
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
@@ -10,10 +10,19 @@ export class UserCardComponent implements OnInit {
   @Input() user: any;
   @Output() profileClicked: EventEmitter<null> = new EventEmitter();
 
-  constructor() {}
+  public photos: any[];
+
+  constructor(private userPhotoService: UserPhotoService) {}
 
   ngOnInit() {
-    
+    this.userPhotoService
+    .getPhoto()
+    .then((incomingPhoto: any[]) => {
+      this.photos = incomingPhoto.filter(p => p.id === 1999);
+    })
+    .catch(err => {
+      console.log(err);
+    });
   }
 
   profileButtonClicked() {

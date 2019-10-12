@@ -1,4 +1,4 @@
-import { UserPhotoService } from './user-photo.service';
+
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,20 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserPhotoComponent implements OnInit {
   @Input() photo: any;
-  
-  public photos: any;
 
-  constructor(private userPhotoService: UserPhotoService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.userPhotoService
-      .getPhoto()
-      .then((incomingPhoto: any[]) => {
-        this.photos = incomingPhoto.filter(p => p.id <= 10);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+
   }
 
 }

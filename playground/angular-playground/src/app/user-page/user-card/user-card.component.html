@@ -11,9 +11,8 @@
     <mat-card-header>
       <div mat-card-avatar>
         <ng-container *ngFor="let photo of photos">
-          <app-user-photo
-          [photo]="photo"></app-user-photo>
-        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <app-user-photo [photo]="photo"></app-user-photo>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
         </ng-container>
       </div>
       <mat-card-title> {{ user.name }} </mat-card-title>
