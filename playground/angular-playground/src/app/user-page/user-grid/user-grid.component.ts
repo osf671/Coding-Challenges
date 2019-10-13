@@ -1,6 +1,9 @@
+import { USERS } from './../mock-users';
+import { User } from './../user';
 import { UserDataService } from "./user-data.service";
 import { Component, OnInit } from "@angular/core";
 import { produce } from "immer";
+
 
 @Component({
   selector: "app-user-grid",
@@ -8,19 +11,28 @@ import { produce } from "immer";
   styleUrls: ["./user-grid.component.scss"]
 })
 export class UserGridComponent implements OnInit {
-  public users: any[];
+  // public users: User[];
+  users: User[];
 
-  constructor(private userDataService: UserDataService) {}
+  constructor(private userDataService: UserDataService) { }
 
   ngOnInit() {
-    this.userDataService
-      .getData()
-      .then((incomingData: any[]) => {
-        this.users = incomingData.map(u => ({ ...u, showFront: true }));
-      })
-      .catch(err => {
-        console.log(err);
-      });
+
+    this.getUsers();
+
+    // this.messageService.add('DataService: fetched data');
+    // this.userDataService
+    //   .getData()
+    //   .then((incomingData: User[]) => {
+    //     this.users = incomingData.map(u => ({ ...u, showFront: true }));
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
+  }
+
+  getUsers(): void {
+    this.userDataService.getUsers().subscribe(users => this.users = users);
   }
 
   toggleCardForUser(user) {
@@ -28,6 +40,7 @@ export class UserGridComponent implements OnInit {
     this.users = produce(this.users, draftUsers => {
       draftUsers.find(u => u.id === user.id).showFront = !user.showFront;
     });
+
 
     // Harder way for non-mutation
     // this.users = [

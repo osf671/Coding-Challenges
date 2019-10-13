@@ -1,7 +1,6 @@
 
 .example-card {
-    height: 460px;
-    width: 350px;
+    max-width: 300px;
     padding: 20px;
     border: 5px solid white;
     background-color: rgb(114, 137, 145);
@@ -10,4 +9,10 @@
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
+  }
+
+  .mat-card-actions button:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    text-align: center;
   }

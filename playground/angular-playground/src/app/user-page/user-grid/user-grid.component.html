@@ -1,20 +1,26 @@
-<div class="container">
-    <header>
-        <h2>Tensure Apprentice List</h2>
-    </header>
-</div>
+<h2>My Apprentice</h2>
+
+  <ul class="heroes">
+    <li *ngFor="let user of users">
+      <a routerLink="/detail/{{user.id}}">
+        <span class="badge">{{ user.id }}</span> {{ user.first_name }} {{ user.last_name }}
+      </a>
+    </li>
+  </ul>
+
 
 <!-- <pre>{{ users | json }}</pre> -->
 <div class="users">
-    <ng-container *ngFor="let user of users">
-        <app-user-card *ngIf="user.showFront === true; else back" [user]="user"
-            (profileClicked)="toggleCardForUser(user)" style="margin: 5px"></app-user-card>
-        <ng-template #back>
-            <app-user-profile [user]="user" (returnClicked)="toggleCardForUser(user)" style="margin: 5px">
-            </app-user-profile>
-        </ng-template>
-    </ng-container>
+  <ng-container *ngFor="let user of users">
+    <app-user-card *ngIf="user.showFront === true; else back" [user]="user" (profileClicked)="toggleCardForUser(user)"
+      style="margin: 5px"></app-user-card>
+    <ng-template #back>
+      <app-user-profile [user]="user" (returnClicked)="toggleCardForUser(user)" style="margin: 5px">
+      </app-user-profile>
+    </ng-template>
+  </ng-container>
 </div>
+
 <!-- <div class="container">
   <header>
     <h2>Tensure Apprentice List</h2>

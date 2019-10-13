@@ -9,13 +9,18 @@
 <div>
   <mat-card class="example-card">
     <mat-card-header>
-      <div mat-card-avatar>
-        <ng-container *ngFor="let photo of photos">
-          <app-user-photo [photo]="photo"></app-user-photo>
+      <img mat-card-avatar src="{{user.thumbnailUrl}}" alt="Random colors" />
+        
+        <!-- <ng-container *ngFor="let photo of photos">
+          <app-user-photo [photo]="photo"></app-user-photo> -->
           <!-- <div mat-card-avatar class="example-header-image"></div> -->
-        </ng-container>
-      </div>
-      <mat-card-title> {{ user.name }} </mat-card-title>
+        <!-- </ng-container> -->
+    
+      <mat-card-title>
+        <label>name:
+          <input [(ngModel)]="user.first_name" placeholder="name" />
+        </label>
+      </mat-card-title>
       <mat-card-subtitle>Title: Apprentice</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="https://i.imgur.com/ZhU54Ea.jpg" alt="Photo of Grizzly bear and cubs" />

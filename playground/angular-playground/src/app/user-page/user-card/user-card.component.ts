@@ -1,5 +1,6 @@
-import { UserPhotoService } from './user-photo.service';
+
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { UserPhotoService } from './user-photo.service';
 
 @Component({
   selector: "app-user-card",
@@ -18,7 +19,7 @@ export class UserCardComponent implements OnInit {
     this.userPhotoService
     .getPhoto()
     .then((incomingPhoto: any[]) => {
-      this.photos = incomingPhoto.filter(p => p.id === 1999);
+      this.photos = incomingPhoto.filter(p => p.id === 2349 );
     })
     .catch(err => {
       console.log(err);
