@@ -1,14 +1,5 @@
-<div id= "info">
-  <app-user-card
-    *ngFor="let u of users"
-    [first]="u.first"
-    [last]="u.last"
-    [img_url]="u.img_url"
-    style="margin: 5px;"
-    [email]= "u.email"
-    [gender]="u.gender"
-    [status]='u.status'
-  >
+<div id="info" *ngIf='data.length'>
+  <app-user-card *ngFor="let u of users" [user]="u">
   </app-user-card>
   <app-article></app-article>
 </div>
